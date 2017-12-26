@@ -16,7 +16,6 @@
 
 # IntelliJ
 /out/
-.idea
 .settings
 
 # mpeltonen/sbt-idea plugin
