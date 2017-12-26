@@ -13,8 +13,12 @@
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
+
+
 # IntelliJ
 /out/
+.idea
+.settings
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -23,6 +27,7 @@
 ### Java ###
 # Compiled class file
 *.class
+target/classes
 
 # Log file
 *.log
