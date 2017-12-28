@@ -1,6 +1,5 @@
 package com.practice.draw.output;
 
-import org.springframework.stereotype.Service;
 
 //@Service
 public class StringPrinter implements Printer<String> {

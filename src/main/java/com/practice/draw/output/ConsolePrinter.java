@@ -1,8 +1,7 @@
 package com.practice.draw.output;
 
-import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class ConsolePrinter implements Printer<String> {
 
     @Override

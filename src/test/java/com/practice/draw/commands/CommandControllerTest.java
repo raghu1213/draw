@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class CommandControllerTest extends TestHelperBase {
+public class CommandControllerTest extends TestHelperBase {
 
     @Test
     void getExecutedCommandsCalledWithoutExecutingAnything()
@@ -23,7 +23,8 @@ class CommandControllerTest extends TestHelperBase {
     @ValueSource(strings ={"L 1 2 6 2","R 14 1 18 3","B 10 3 o"})
     void executeCalledWithoutCanvasThrowsException(String args){
         CommandArgs parsedArgs = this.getBootStrapper().getCommandLineParser().parse(args.split(" "));
-        CommandController controller =this.getBootStrapper().getCommandController();
+        CommandController controller =new CommandController();
+        controller.setCommandFactory(this.getBootStrapper().getCommandFactory());
 
         assertThrows( UnsupportedOperationException.class,()->controller.executeCommand(parsedArgs ));
     }

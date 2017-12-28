@@ -2,7 +2,7 @@ package com.practice.draw.TestHelper;
 
 import com.practice.draw.TestBootStrapper;
 import com.practice.draw.args.CommandArgs;
-import com.practice.draw.configuration.TestConfig;
+import com.practice.draw.configuration.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class TestHelperBase {
@@ -20,12 +20,13 @@ public class TestHelperBase {
     }
 
     public TestHelperBase(){
-       setContext();
+       if (bootStrapper ==null) {
+           setContext();
+       }
     }
-    protected static final void setContext(){
-            context = new AnnotationConfigApplicationContext(TestConfig.class);
-            //context.getEnvironment().setActiveProfiles("test");
-            bootStrapper = new TestBootStrapper(context);
+    protected static final void setContext() {
+        context = new AnnotationConfigApplicationContext(AppConfig.class);
+        bootStrapper = new TestBootStrapper(context);
     }
 
     protected final CommandArgs executeCommandParser(String[] testArgs) {

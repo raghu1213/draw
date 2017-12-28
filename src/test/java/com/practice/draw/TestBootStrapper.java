@@ -2,6 +2,7 @@ package com.practice.draw;
 
 import com.practice.draw.commands.Command;
 import com.practice.draw.commands.CommandController;
+import com.practice.draw.commands.CommandFactory;
 import com.practice.draw.common.Constants;
 import com.practice.draw.output.OutputWriter;
 import com.practice.draw.output.Printer;
@@ -16,11 +17,17 @@ public class TestBootStrapper {
     OutputWriter outputWriter;
     Command command ;
 
+
+
+    CommandFactory commandFactory;
+
     public TestBootStrapper(AnnotationConfigApplicationContext context){
         commandLineParser = (Parser)context.getBean(Constants.COMMAND_LINE_PARSER);
         commandController = context.getBean(CommandController.class);
         printer = (Printer<String>) context.getBean(Constants.PRINTER_STRING);
         outputWriter =  new OutputWriter(printer);
+        commandFactory = (CommandFactory) context.getBean(Constants.COMMAND_FACTORY);
+
 
     }
 
@@ -40,5 +47,7 @@ public class TestBootStrapper {
         return outputWriter;
     }
 
-
+    public CommandFactory getCommandFactory() {
+        return commandFactory;
+    }
 }

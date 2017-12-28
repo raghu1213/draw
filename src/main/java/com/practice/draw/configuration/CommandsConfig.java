@@ -15,7 +15,7 @@ public class CommandsConfig {
         return new CoordinateGenerator();
     }
 
-    @Bean(name="commandFactory")
+    @Bean(name=Constants.COMMAND_FACTORY)
     public ServiceLocatorFactoryBean commandFactory() {
         ServiceLocatorFactoryBean locatorFactoryBean = new ServiceLocatorFactoryBean();
         locatorFactoryBean.setServiceLocatorInterface(CommandFactory.class);
@@ -24,6 +24,12 @@ public class CommandsConfig {
 
     @Bean(name = {Constants.COMMAND_CANVAS,"CanvasArgs"})
     public Command createCanvasCommand() {
+        return new CanvasCommand(coordinateGenerator());
+    }
+
+    @Bean(name = {Constants.COMMAND_CANVAS_TEST,"CanvasArgs"})
+    @Scope(scopeName = "prototype")
+    public Command createCanvasCommandTest() {
         return new CanvasCommand(coordinateGenerator());
     }
 

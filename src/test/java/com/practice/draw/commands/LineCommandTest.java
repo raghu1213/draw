@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 
-class LineCommandTest extends TestHelperBase {
+public class LineCommandTest extends TestHelperBase {
 
     @Test
     void getResultsReturnsEmptyReadyOnlyCollectionWhenCalledWithoutExecute()

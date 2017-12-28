@@ -4,6 +4,7 @@ public final class Constants {
     public static final String EXCEPTION_INVALID_PARAMTER  = "Invalid Command Parameters";
 
     public static final String COMMAND_LINE_PARSER = "commandLineParser";
+    public static final String COMMAND_FACTORY ="commandFactory";
 
 
     public static final String COMMAND_CANVAS = "canvasCommand";
@@ -24,4 +25,6 @@ public final class Constants {
     public static final String PRINTER_STRING = "stringPrinter";
     public static final String COORDINATOR_GENERATOR = "coordinateGenerator";
     public static final String COMMAND_CONTROLLER = "commandController";
+
+    public static final String COMMAND_CANVAS_TEST = "canvasCommandTest";
 }

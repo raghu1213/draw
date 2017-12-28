@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 
-class FillCommandTest extends TestHelperBase {
+public class FillCommandTest extends TestHelperBase {
     @Test
     void getResultsReturnsEmptyReadyOnlyCollectionWhenCalledWithoutExecute()
     {

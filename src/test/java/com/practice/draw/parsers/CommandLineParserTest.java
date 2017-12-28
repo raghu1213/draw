@@ -4,7 +4,7 @@ import com.practice.draw.TestHelper.TestHelperBase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class CommandLineParserTest extends TestHelperBase {
+public class CommandLineParserTest extends TestHelperBase {
 
 
 	/*@Test

@@ -17,12 +17,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-class CanvasCommandTest extends TestHelperBase {
+public class CanvasCommandTest extends TestHelperBase {
 
     @Test
     void getResultsReturnsEmptyReadyOnlyCollectionWhenCalledWithoutExecute()
     {
-        Command canvasCommand = (Command) this.getContext().getBean(Constants.COMMAND_CANVAS);
+        Command canvasCommand = (Command) this.getContext().getBean(Constants.COMMAND_CANVAS_TEST);
         List<Point> coordinates = canvasCommand.getResult();
 
         Assertions.assertEquals(0,coordinates.size());
