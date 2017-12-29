@@ -6,13 +6,13 @@ import com.practice.draw.common.Constants;
 import com.practice.draw.common.Point;
 import com.practice.draw.common.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@Service(Constants.COMMAND_CONTROLLER)
+@Controller(Constants.COMMAND_CONTROLLER)
 public class CommandController implements Validator<Command> {
 
     /**
